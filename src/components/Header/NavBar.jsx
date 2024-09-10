@@ -32,6 +32,8 @@ const NavBar = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
+
+
     }, []);
 
     const getLinkClass = ({ isActive }) =>
