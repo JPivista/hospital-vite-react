@@ -36,12 +36,13 @@ const Chatbot = () => {
     };
 
     return (
-        <div className="relative">
+        <div className="relative" >
             <button
+                data-aos="fade-left"
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-24 right-5 p-3 bg-[#1c2e4a] text-white rounded-full shadow-lg flex items-center justify-center z-50"
+                className="fixed bottom-20 right-5 p-4 h-12 w-12 bg-[#1c2e4a] text-white rounded-full shadow-md shadow-gray-50 flex items-center justify-center z-50"
             >
-                <span className="text-lg font-bold">Chat</span>
+                <span className="text-sm font-bold" >Chat</span>
             </button>
 
             {isOpen && (

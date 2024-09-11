@@ -5,6 +5,7 @@ import AboutUs from '../pages/AboutUs/AboutUs';
 import Services from '../pages/Servicess/Services';
 import OurTeam from '../pages/OurTeam/OurTeam';
 import ContactUs from '../pages/ContactUs/ContactUs';
+import NotFound from '../pages/NotFound/NotFound';
 
 function AppRoutes() {
     let routes = useRoutes([
@@ -17,6 +18,8 @@ function AppRoutes() {
                 { path: "services", element: <Services /> },
                 { path: "our-team", element: <OurTeam /> },
                 { path: "contact-us", element: <ContactUs /> },
+                // Catch-all route for non-existing paths
+                { path: "*", element: <NotFound /> }
             ]
         }
     ]);

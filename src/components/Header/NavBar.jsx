@@ -39,6 +39,9 @@ const NavBar = () => {
     const getLinkClass = ({ isActive }) =>
         isActive ? 'text-[#8448a0] font-bold [text-shadow:_0_4px_8px_rgba(144_165_223_/_0.2)]' : '';
 
+    const getLinkClassNew = ({ isActive }) =>
+        isActive ? 'text-[#8448a0] font-bold' : 'text-black';
+
     return (
         <div className={`fixed z-50 top-0 left-0 w-full transition-colors duration-300 ${isScrolled ? 'bg-white text-[#1c2e4a] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]' : 'bg-transparent text-white'}`}>
             <div className='lg:w-[95%] mx-auto sm:px-6 lg:px-6'>
@@ -62,7 +65,7 @@ const NavBar = () => {
                         <button
                             type='button'
                             onClick={toggleMenu}
-                            className='text-gray-300 hover:text-black focus:outline-none fixed top-6 right-6'
+                            className={`  focus:outline-none fixed top-4 right-6 ${isScrolled ? 'text-black' : 'text-white'}`}
                         >
                             <FaBars className='h-6 w-6' />
                         </button>
@@ -90,12 +93,12 @@ const NavBar = () => {
 
                 {/* Mobile Navigation Menu */}
                 <div className={`md:hidden absolute top-full left-0 w-full bg-white z-50 ${isMenuOpen ? 'block' : 'hidden'}`}>
-                    <div className='flex flex-col items-center space-y-4 py-4 fixed bg-white'>
+                    <div className='flex flex-col items-start space-y-4 py-4 fixed bg-white w-full ps-3'>
                         {navLinks.map((link) => (
                             <NavLink
                                 to={link.route}
                                 key={link.route}
-                                className={getLinkClass}
+                                className={getLinkClassNew}
                                 onClick={toggleMenu} // Close menu on link click
                             >
                                 {link.name}

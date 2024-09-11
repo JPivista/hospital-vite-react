@@ -3,6 +3,127 @@
 @tailwind utilities;
 
 
-/* * , body {
-    background: #1c2e4a;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* , body {
+   font-family: "Open Sans", sans-serif;
+   font-weight: 400;
+}
+
+
+.text-rblue {
+  color:#002570;
+}
+
+.bg-rblue {
+  background:#002570;
+}
+
+/*  Dodger Blue */
+.text-dblue{
+  color:#007eff;
+}
+
+.bg-dblue {
+  background:#007eff; 
+}
+
+.container-xl {
+  width:1280px !important;
+}
+
+@media(max-with:1279px) {
+  ..container-xl {
+    width:100% !important;
+  }
+  
+  
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mediic-btn a {
+    padding: 16px 35px;
+    font-size: 18px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 500;
+    font-family: "Albert Sans";
+    border-radius: 32px;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+    overflow: hidden;
+    border: 1px solid #007eff;
+    background-color: #fff;
+  }
+  
+  .mediic-btn a:after {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: #fff;
+    position: absolute;
+    content: attr(data-text);
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #007eff;
+    background-image: url(./assets/mask-btn2.png);
+    -webkit-mask: url(./assets/mask-btn2.png);
+    mask: url(./assets/mask-btn2.png);
+    -webkit-mask-size: 2300% 100%;
+    mask-size: 2300% 100%;
+    animation: mask_animation_2 0.7s steps(22) forwards;
+    z-index: -1;
+  }
+  
+  .mediic-btn a i {
+    padding-left: 7px;
+    position: relative;
+    top: 3px;
+    transform: rotate(-45deg);
+    display: inline-block;
+  }
+  
+  .mediic-btn a:hover:after {
+    animation: mask_animation 0.7s steps(22) forwards;
+  }
+  
+  .mediic-btn a:hover {
+    color: var(--secondary-color);
+  }
+  
+  @keyframes mask_animation {
+    from {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  
+    to {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+  }
+  
+  @keyframes mask_animation_2 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+  
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+
+
+  

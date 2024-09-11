@@ -11,9 +11,10 @@ const navLinks = [
 ];
 
 const getLinkClass = ({ isActive }) =>
-    isActive ? 'text-[#8448a0] font-bold ' : '';
+    isActive ? 'text-[#8448a0] font-bold ' : 'text-gray-400';
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear(); // Get the current year dynamically
 
     return (
         <>
@@ -52,7 +53,7 @@ const Footer = () => {
                     </div>
 
                     <div className="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400">
-                        &copy; 2024 Company Name. All rights reserved.
+                        &copy; {currentYear} Company Name. All rights reserved.
                     </div>
                 </div>
             </footer>
