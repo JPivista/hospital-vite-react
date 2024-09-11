@@ -8,14 +8,15 @@ const Home = () => {
         <>
             <div className="relative w-full h-[90vh] overflow-hidden">
                 <ReactPlayer
-                    url="https://www.youtube.com/embed/D0UnqGm_miA?autoplay=1&loop=1&playlist=D0UnqGm_miA&modestbranding=1&controls=0&rel=0&showinfo=0"
+                    url="https://www.youtube.com/embed/tMTJFsxtF7g?autoplay=1&loop=1&playlist=tMTJFsxtF7g&modestbranding=1&controls=0&rel=0&showinfo=0&vq=hd1080"
+                    // url="https://www.youtube.com/embed/D0UnqGm_miA?autoplay=1&loop=1&playlist=D0UnqGm_miA&modestbranding=1&controls=0&rel=0&showinfo=0"
                     playing={true}
                     loop={true}
                     muted={true}
                     controls={false}
                     width="100%"
                     height="100%"
-                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                    className="absolute top-0 left-0"
                 />
                 <div className="absolute inset-0 flex items-center justify-center z-10 text-white text-center">
                     <div>
