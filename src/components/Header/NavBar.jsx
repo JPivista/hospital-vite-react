@@ -88,7 +88,7 @@ const NavBar = () => {
                             Quick Explore
                         </p>
                     </div> */}
-                    <img src='/logo.png' alt='logo' className="lg:w-[200px] w-[100px]" />
+                    <img src='/logo.png' alt='logo' className="lg:w-[250px] w-[200px] p-5 lg:p-1 bg-white rounded-lg" />
                     {/* Mobile Menu Icon */}
                     <div className='md:hidden flex items-center justify-center shadow-sm'>
                         <button
@@ -130,7 +130,7 @@ const NavBar = () => {
                                             {link.subLinks.map(category => (
                                                 <div key={category.category} className='flex flex-col'>
                                                     <p className='font-bold text-gray-800 bg-gray-200 p-2 mb-4 text-rblue'>{category.category}</p>
-                                                    <ul>
+                                                    <ul className='flex flex-col gap-2'>
                                                         {category.links.map(subLink => (
                                                             <li key={subLink.route}>
                                                                 <NavLink
