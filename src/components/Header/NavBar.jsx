@@ -92,7 +92,7 @@ const NavBar = () => {
                         <img src='/logo.png' alt='logo' className="lg:w-[250px] w-[200px] p-5 lg:p-1 lg:bg-white lg:rounded-lg" />
                     </Link>
                     {/* Mobile Menu Icon */}
-                    <div className='md:hidden flex items-center justify-center shadow-sm'>
+                    <div className='lg:hidden flex items-center justify-center shadow-sm'>
                         <button
                             type='button'
                             onClick={toggleMenu}
@@ -103,7 +103,7 @@ const NavBar = () => {
                     </div>
 
                     {/* Desktop Navigation Links */}
-                    <div className='hidden md:flex items-center px-10 py-4 space-x-6'>
+                    <div className='hidden lg:flex items-center px-10 py-4 space-x-6'>
                         <ul className='flex items-center space-x-6 relative bg-white px-3 py-2 rounded-lg'>
                             {navLinks.slice(0, -1).map((link) => (
                                 <li
@@ -165,7 +165,7 @@ const NavBar = () => {
                 </div>
 
                 {/* Mobile Navigation Menu */}
-                <div className={`md:hidden absolute top-16 left-0 w-full bg-white z-50 border border-gray-200 shadow-lg ${isMenuOpen ? 'block' : 'hidden'}`}>
+                <div className={`lg:hidden absolute top-16 left-0 w-full bg-white z-50 border border-gray-200 shadow-lg ${isMenuOpen ? 'block' : 'hidden'}`}>
                     <div className='flex flex-col items-start space-y-4 py-4'>
                         {navLinks.map((link) => (
                             <div key={link.route}>

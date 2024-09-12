@@ -18,7 +18,7 @@ const Home = () => {
                     controls={false}
                     width="100%"
                     height="100%"
-                    className="absolute top-0 left-0 lg:block hidden"
+                    className="fixed top-0 left-0 lg:block hidden h-[90vh] -z-50"
                 />
                 <ReactPlayer
                     // url="https://www.youtube.com/embed/tMTJFsxtF7g?autoplay=1&loop=1&playlist=tMTJFsxtF7g&modestbranding=1&controls=0&rel=0&showinfo=0&vq=hd1080"
@@ -29,7 +29,7 @@ const Home = () => {
                     controls={false}
                     width="100%"
                     height="100vh"
-                    className="absolute top-0 left-0 block lg:hidden"
+                    className="fixed top-0 left-0 block lg:hidden -z-50"
                 />
                 <div className="absolute inset-0 flex items-center justify-center z-10 text-white text-center">
                     <div>

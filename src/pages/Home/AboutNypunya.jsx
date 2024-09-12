@@ -146,7 +146,7 @@ const AboutMedical = () => {
             </div>
 
 
-            <div className=" justify-center lg:flex hidden">
+            <div className=" justify-center lg:flex hidden bg-white">
                 <div className="container-xl lg:pt-20 py-10">
                     <div className="">
                         <Slider {...settings}>
