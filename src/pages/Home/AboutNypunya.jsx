@@ -135,7 +135,9 @@ const AboutMedical = () => {
                             </p>
                             <div className="mediic-btn cursor-scale small">
                                 <Link to="/about-us">
-                                    More About
+                                    <p className="font-semibold">
+                                        More About
+                                    </p>
                                 </Link>
                             </div>
                         </div>
