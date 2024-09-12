@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaChevronDown, FaArrowRight } from 'react-icons/fa'; // Import FaArrowRight for the Book button
 
 const navLinks = [
@@ -88,7 +88,9 @@ const NavBar = () => {
                             Quick Explore
                         </p>
                     </div> */}
-                    <img src='/logo.png' alt='logo' className="lg:w-[250px] w-[200px] p-5 lg:p-1 bg-white rounded-lg" />
+                    <Link to="/">
+                        <img src='/logo.png' alt='logo' className="lg:w-[250px] w-[200px] p-5 lg:p-1 lg:bg-white lg:rounded-lg" />
+                    </Link>
                     {/* Mobile Menu Icon */}
                     <div className='md:hidden flex items-center justify-center shadow-sm'>
                         <button

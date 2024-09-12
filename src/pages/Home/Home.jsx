@@ -2,6 +2,7 @@ import CountUp from 'react-countup';
 import ReactPlayer from "react-player"
 import AboutNypunya from './AboutNypunya';
 import Services from './Services';
+import MakeanAppointment from './MakeanAppointment';
 
 
 const Home = () => {
@@ -160,10 +161,10 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
             <AboutNypunya />
-
             <Services />
-
+            <MakeanAppointment />
 
 
         </>

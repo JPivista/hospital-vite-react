@@ -117,7 +117,7 @@ const AboutMedical = () => {
                     <hr className='w-full border-1 border-gray-300 ' />
                     <div className="lg:grid lg:grid-cols-12 flex flex-col gap-5 mt-6">
                         <div className='col-span-7'>
-                            <img src='/about/about-img.jpg' alt='' data-aos="flip-right" />
+                            <img src='/about/about-img.jpg' alt='' data-aos="flip-right" className='h-full object-cover' />
                         </div>
                         <div className='flex flex-col gap-4 col-span-5' data-aos="fade-left">
                             <p className="lg:text-2xl font-semibold text-rblue">
