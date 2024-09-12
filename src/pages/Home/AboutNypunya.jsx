@@ -154,7 +154,7 @@ const AboutMedical = () => {
                                 service.links.map(link => (
                                     <div key={link.route} className="slick-slide" >
                                         <div className="grid-item">
-                                            <img src="/public/about/star.png" className="star-img" alt="Star" />
+                                            <img src="/about/star.png" className="star-img" alt="Star" />
                                             <NavLink to={link.route} className="scroll-text lg:text-6xl text-3xl font-bold text-rblue">
                                                 {link.name}
                                             </NavLink>
