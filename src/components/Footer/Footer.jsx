@@ -1,6 +1,7 @@
-import WhatsAppButton from "../../utils/WhatsAppButton"
-import Chatbox from "../../utils/Chatbox"
-import { NavLink } from "react-router-dom"
+import WhatsAppButton from "../../utils/WhatsAppButton";
+import Chatbox from "../../utils/Chatbox";
+import { NavLink } from "react-router-dom";
+import { Envelope, Phone, GeoAlt, Facebook, Instagram, Youtube } from 'react-bootstrap-icons'; // Import icons
 
 const navLinks = [
     { name: 'Home', route: '/' },
@@ -23,13 +24,24 @@ const Footer = () => {
                     <div className="flex flex-wrap justify-between">
 
                         <div className="w-full md:w-1/3 mb-6 md:mb-0">
-                            <h2 className="text-lg font-semibold">Company Name</h2>
-                            <p className="mt-2 text-gray-400">A short description of your company.</p>
+                            <h2 className="text-lg font-semibold">Follow us on Social Media</h2>
+                            {/* Social Media Icons */}
+                            <div className="mt-4 flex space-x-4">
+                                <a href="https://www.facebook.com/NypunyaAC/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                                    <Facebook size={24} />
+                                </a>
+                                <a href="https://www.instagram.com/nypunya_aesthetic_clinic_/?igshid=1hj1j7deqfexh" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                                    <Instagram size={24} />
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCES_6H91r0LfLwSI7jDcWrQ" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
+                                    <Youtube size={28} />
+                                </a>
+                            </div>
                         </div>
 
                         <div className="w-full md:w-1/3 mb-6 md:mb-0">
                             <h2 className="text-lg font-semibold">Quick Links</h2>
-                            <ul className=' flex flex-col items-start mt-2'>
+                            <ul className='flex flex-col items-start mt-2'>
                                 {navLinks.map((link) => (
                                     <li key={link.route}>
                                         <NavLink
@@ -44,11 +56,24 @@ const Footer = () => {
                             </ul>
                         </div>
 
-                        <div className="w-full md:w-1/3">
+                        <div className="w-full md:w-1/3 flex flex-col gap-2">
                             <h2 className="text-lg font-semibold">Contact Us</h2>
-                            <p className="mt-2 text-gray-400">1234 Street Name, City, State, 56789</p>
-                            <p className="mt-2 text-gray-400">Email: info@example.com</p>
-                            <p className="mt-2 text-gray-400">Phone: (123) 456-7890</p>
+                            <div className="mt-2 text-gray-400 flex items-center">
+                                <GeoAlt className="mr-4 text-[28px] ]" /> {/* Address icon */}
+                                <p>#3,1st Cross Off 24th Main, 2nd Phase, J. P. Nagar, Bengaluru</p>
+                            </div>
+                            <div className="mt-2 text-gray-400 flex items-center">
+                                <Envelope className="mr-4 text-[25px] ]" /> {/* Email icon */}
+                                <a href="mailto: clinic.nypunyaaesthetic@gmail.com" target="_blank">
+                                    Email: clinic.nypunyaaesthetic@gmail.com
+                                </a>
+                            </div>
+                            <div className="mt-2 text-gray-400 flex items-center">
+                                <Phone className="mr-4 text-[28px] ]" /> {/* Phone icon */}
+                                <a href="tel:9876543210" target="_blank">
+                                    Phone: (123) 456-7890
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -56,7 +81,7 @@ const Footer = () => {
                         &copy; {currentYear} Company Name. All rights reserved.
                     </div>
                 </div>
-            </footer>
+            </footer >
 
             <div>
                 <Chatbox />
@@ -66,4 +91,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default Footer;
