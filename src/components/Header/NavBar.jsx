@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaChevronDown } from 'react-icons/fa';
 
 const navLinks = [
@@ -77,19 +77,27 @@ const NavBar = () => {
                 <div className='flex items-center justify-between p-0'>
                     {/* Logo */}
                     <div className={`flex-shrink-0 cursor-pointer pl-7 px-4 py-4 flex items-center`}>
+
+                        {/* <h1 className='text-24px inline-flex gap-3 items-center text-[#B5D44C] font-bold'>
+                            YourBlogs
+                        </h1>
                         <p className='font-bold text-[13px] text-[#B5D44C] tracking-[8px]'>
                             Quick Explore
-                        </p>
+                        </p> */}
+
+                        <Link to="/">
+                            <img src='/logo.png' alt='logo' className="lg:w-[250px] w-[200px]" />
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Icon */}
-                    <div className='md:hidden flex items-center shadow-sm'>
+                    <div className='md:hidden flex items-center justify-center shadow-sm'>
                         <button
                             type='button'
                             onClick={toggleMenu}
                             className={`focus:outline-none fixed top-4 right-6 ${isScrolled ? 'text-black' : 'text-white'}`}
                         >
-                            <FaBars className='h-6 w-6' />
+                            <FaBars className='h-8 w-8 mt-1' />
                         </button>
                     </div>
 
