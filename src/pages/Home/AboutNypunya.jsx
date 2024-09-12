@@ -144,9 +144,9 @@ const AboutMedical = () => {
             </div>
 
 
-            <div className=" flex justify-center ">
+            <div className=" flex justify-center lg:block hidden">
                 <div className="container-xl lg:pt-20 py-10">
-                    <div className="" data-aos="zoom-out-up">
+                    <div className="">
                         <Slider {...settings}>
                             {services.flatMap(service =>
                                 service.links.map(link => (
